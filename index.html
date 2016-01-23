@@ -2,51 +2,53 @@
 <html>
     <head>
         <title>A simple chartjs starter project</title>
-        <script src="bower_components/chartjs/Chart.js"></script>
+        <script src="bower_components/chartjs/Chart.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
     </head>
     <body>
         <h3>Front-end Architecture Selector</h3>
-        <form class="column-1" id="project">
+        <div class="column-1" id="project">
             <fieldset>
                 <legend>Project</legend>
                 <section class="form-group">
                     <label class="form-label">Event</label>
                     <div class="form-control">
-                        <input name="project_event" type="range" min="0" max="100">
+                        <input name="event" type="range" min="0" max="100">
                     </div>
                 </section>
                 <section class="form-group">
                     <label class="form-label">Request</label>
                     <div class="form-control">
-                        <input name="project_request" type="range" min="0" max="100">
+                        <input name="request" type="range" min="0" max="100">
                     </div>
                 </section>
                 <section class="form-group">
                     <label class="form-label">Model</label>
                     <div class="form-control">
-                        <input name="project_model" type="range" min="0" max="100">
+                        <input name="model" type="range" min="0" max="100">
                     </div>
                 </section>
                 <section class="form-group">
                     <label class="form-label">Logic</label>
                     <div class="form-control">
-                        <input name="project_logic" type="range" min="0" max="100">
+                        <input name="logic" type="range" min="0" max="100">
                     </div>
                 </section>
                 <section class="form-group">
                     <label class="form-label">View</label>
                     <div class="form-control">
-                        <input name="project_view" type="range" min="0" max="100">
+                        <input name="view" type="range" min="0" max="100">
                     </div>
                 </section>
             </fieldset>
-        </form>
+        </div>
 
         <div class="column-1" id="chart">
             <canvas id="canvas" height="480" width="480"></canvas>
         </div>
 
+        <script src="javascripts/Spider.js"></script>
         <script src="javascripts/main.js"></script>
     </body>
 </html>
