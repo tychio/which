@@ -15,7 +15,6 @@
     };
     var ctx = document.getElementById('canvas').getContext('2d');
     var spidar = new Chart(ctx).Radar(charData, {
-        responsive: true,
         showTooltips: false,
         scaleFontSize: 10,
         angleLineWidth: 4,
