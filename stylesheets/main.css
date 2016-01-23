@@ -1,3 +1,22 @@
 body {
     font-family: Helvetica, arial, sans-serif;
 }
+
+.form-group {
+    height: 30px;
+}
+
+.form-group .form-label {
+    float: left;
+    width: 9em;
+    padding-right: 1em;
+    text-align: right;
+}
+
+.form-group .form-control {
+    margin-left: 10em;
+}
+
+.form-group .form-control input {
+    width: 100%;
+}
