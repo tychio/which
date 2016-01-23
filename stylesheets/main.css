@@ -2,6 +2,13 @@ body {
     font-family: Helvetica, arial, sans-serif;
 }
 
+canvas {
+    display: block;
+    margin: 0 auto;
+    max-height: 480px;
+    max-width: 480px;
+}
+
 .form-group {
     height: 30px;
 }
@@ -19,4 +26,28 @@ body {
 
 .form-group .form-control input {
     width: 100%;
+}
+
+/* ======= COLUMN ======= */
+.column-1,
+.column-2 {
+    position: relative;
+    float: left;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .column-1 {
+        width: 48%;
+        margin: 0 1%;
+    }
+}
+@media (min-width: 1201px) {
+    .column-1,
+    .column-2 {
+        width: 31%;
+        margin: 0 1%;
+    }
 }
