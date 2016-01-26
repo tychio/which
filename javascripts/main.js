@@ -14,4 +14,12 @@
 
         spider.update(settings);
     });
+
+    spider.append('angular', {
+        event: 80,
+        request: 70,
+        model: 100,
+        logic: 10,
+        view: 90
+    }).render();
 })(jQuery);
