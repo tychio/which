@@ -14,7 +14,8 @@ var Spider = (function () {
             scaleStepWidth : 20,
             angleLineWidth: 4,
             pointDotRadius: 4,
-            pointDotStrokeWidth: 2
+            pointDotStrokeWidth: 2,
+            multiTooltipTemplate: '<%if (datasetLabel){%><%=datasetLabel%>: <%}%><%= value %>'
         };
     }
 

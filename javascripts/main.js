@@ -15,7 +15,7 @@
         spider.update(settings);
     });
 
-    spider.append('angular', {
+    spider.append('Angular', {
         event: 80,
         request: 70,
         model: 100,
