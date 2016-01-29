@@ -26,9 +26,9 @@ var Spider = (function () {
         return self;
     };
 
-    cls.prototype.append = function (name, params) {
+    cls.prototype.append = function (name, params, color) {
         var self = this;
-        self.charData.datasets.push(_createDataset(name, params, '#cc3333'));
+        self.charData.datasets.push(_createDataset(name, params, color));
         return self;
     };
 

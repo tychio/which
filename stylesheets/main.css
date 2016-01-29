@@ -28,6 +28,22 @@ canvas {
     width: 100%;
 }
 
+.badge {
+    height: 3em;
+    line-height: 3em;
+    padding: 0.5em 2em;
+    border-radius: 0.2em;
+    background-color: #ccc;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    text-shadow: 0 0 1px #333;
+}
+
+.badge:hover {
+    opacity: 0.8;
+}
+
 /* ======= COLUMN ======= */
 .column-1,
 .column-2 {
@@ -43,11 +59,19 @@ canvas {
         width: 48%;
         margin: 0 1%;
     }
+
+    .badge {
+        font-size: 1.2em;
+    }
 }
 @media (min-width: 1201px) {
     .column-1,
     .column-2 {
         width: 31%;
         margin: 0 1%;
+    }
+
+    .badge {
+        font-size: 1.4em;
     }
 }

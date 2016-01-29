@@ -21,5 +21,5 @@
         model: 100,
         logic: 10,
         view: 90
-    }).render();
+    }, '#cc3333').render();
 })(jQuery);
