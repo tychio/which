@@ -5,7 +5,7 @@
         model: 50,
         logic: 50,
         view: 50,
-    });
+    }).render();
 
     $('#project input').on('change', function () {
         var settings = {};
@@ -15,11 +15,23 @@
         spider.update(settings);
     });
 
-    spider.append('Angular', {
-        event: 80,
-        request: 70,
-        model: 100,
-        logic: 10,
-        view: 90
-    }, '#cc3333').render();
+    $('#frameworks .badge').on('click', function () {
+        var $badge = $(this);
+        if ($badge.hasClass('active')) {
+            $badge.removeClass('active');
+        } else {
+            $badge.addClass('active');
+            var name = $badge.text();
+            var color = $badge.css('backgroundColor');
+            var params = $badge.data('params').split(',');
+            spider.append(name, {
+                event: params[0],
+                request: params[1],
+                model: params[2],
+                logic: params[3],
+                view: params[4]
+            }, color).render();
+        }
+    });
+
 })(jQuery);

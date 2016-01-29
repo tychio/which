@@ -68,7 +68,13 @@ var Spider = (function () {
     }
 
     function _rgb (color) {
-        var rgb = color.replace(/[\d\w]{2}/g, function ($1) { return '|' + $1 }).split('|').slice(1);
+        var rgb;
+        if (color.indexOf('rgb') >= 0) {
+            rgb = color.match(/\d{1,3}/g);
+        } else {
+            rgb = color.replace(/[\d\w]{2}/g, function ($1) { return '|' + $1 }).split('|').slice(1);
+        }
+        
         return {
             normal: rgb.map(_hex2deci).join(','),
             lighten: rgb.map(function (color) { return _hex2deci(color, 1.4); }).join(','),
