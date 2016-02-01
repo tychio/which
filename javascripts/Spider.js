@@ -51,11 +51,12 @@ var Spider = (function () {
         var self = this;
         var radar = self.radar;
         var points = radar.datasets[0].points;
-        points[0].value = params.event || points[0].value;
-        points[1].value = params.request || points[1].value;
-        points[2].value = params.model || points[2].value;
-        points[3].value = params.logic || points[3].value;
-        points[4].value = params.view || points[4].value;
+        var data = self.chartData.datasets[0].data;
+        data[0] = points[0].value = params.event || points[0].value;
+        data[1] = points[1].value = params.request || points[1].value;
+        data[2] = points[2].value = params.model || points[2].value;
+        data[3] = points[3].value = params.logic || points[3].value;
+        data[4] = points[4].value = params.view || points[4].value;
 
         radar.update();
 
