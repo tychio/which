@@ -32,6 +32,19 @@ var Spider = (function () {
         return self;
     };
 
+    cls.prototype.remove = function (name) {
+        var self = this;
+        var datasets = self.charData.datasets;
+        for (var index = 0; index < datasets.length; index++) {
+            if (datasets[index].label == name) {
+                datasets.splice(index, 1);
+                index = datasets.length;
+            }
+        }
+
+        return self;
+    };
+
     cls.prototype.update = function (params) {
         var self = this;
         var chart = self.chart;

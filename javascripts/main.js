@@ -17,11 +17,12 @@
 
     $('#frameworks .badge').on('click', function () {
         var $badge = $(this);
+        var name = $badge.text();
         if ($badge.hasClass('active')) {
             $badge.removeClass('active');
+            spider.remove(name).render();
         } else {
             $badge.addClass('active');
-            var name = $badge.text();
             var color = $badge.css('backgroundColor');
             var params = $badge.data('params').split(',');
             spider.append(name, {
